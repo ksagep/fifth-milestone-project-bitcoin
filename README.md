@@ -1,12 +1,105 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Bitcoin – currency of matrix
 
-## Gitpod Template Instructions
+## Dataset Content
 
-Welcome,
+The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace. The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange . The data set includes information about:
+-	Open and closing prices which are show how the exchange rate developed during the given day;
+-	The highest and lowest exchange rate value during the given day.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions. Click the Use this template button to get started.
+Variable	Meaning	Units
+Date	given date of day	date
+Closing Price (USD)	exchange rate value when the market closed	109,58 - 63347,80
+24h Open (USD)	exchange rate value when the market opened	109,58 - 63563,67
+24h High (USD)	the highest value of exchange rate on the given day	119,67 - 64802,79
+24h Low (USD)	the lowest value of exchange rate on the given day	84,33 - 62095,63
 
-You can safely delete the Gitpod Template Instructions section of this README.md file,  and modify the remaining paragraphs for your own project. Please do read the Gitpod Template Instructions at least once, though! It contains some important information about Gitpod and the extensions we use. 
+## Project Terms and Jargon
+-	Exchange rate: the value of rate between Bitcoin and USD on the given day
+-	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
+
+## Business requirements / User storie
+
+A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.).
+In her opinion, the price of Bitcoin will rise significantly in the next period, so she wants to know in which period of the year, or when the market opens or closes, it is worth dealing with buying and selling. She is also interested in whether or not she can expect a higher exchange rate in the last two months of the year because of Black Friday and the holidays. According to her information, the Bitcoin exchange rate changes with a four-year cycle, which may have an influence on cryptocurrency trading. She asked me to look for answers to his questions from the database available to her. Her database is open-sourced and shared only with me for this project.
+
+## Hypothesis and how to validate?
+
+1.	According to my friend, the opening price is lower than the closing price, so it is advisable to buy closer to the opening time. As a result of the events of the day, the exchange rate rises, so you should sell the available Bitcoin at a time close to the closing in the hope of the greatest possible profit.
+	Validation: determine the difference between the opening and closing values for each day (or for which data is available) and examine their tendency. If the received value is positive, then there was an increase during the day, but in the case of a negative value, the exchange rate decreased. This will be validated with a correlation study. Use diagrams for visualisation.
+2.	Can we expect a higher exchange rate in the last two months of the year due to Black Friday and the holidays than in the previous 10 months?
+	Validation: To examine the difference between the closing value on 1st January and 31th October, and to compare this value annually with the difference between the closing values on 1st November and 31th December. This will be validated with a correlation study.
+3.	Every fourth year, the price of Bitcoin falls compared to the previous three years, so it is worth selling in the first three years of the four-year cycle, and buying in the fourth year.
+	Validation: To examine the difference between the closing value on 1st January and 31th December in every year and to make an annual comparison based on the available data. If it is possible to identify the year in which the exchange rate decreases, the cyclicality can be established. This will be validated with a correlation study.
+4.	As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+	Validation: To examine the difference between the opening and closing value on 1st January, 30th June and 31th December in every year and to make comparison based on the available data. This will be validated with a correlation study. Use diagrams for visualisation.
+
+## The rationale to map the business requirements to the Data Visualizations and ML tasks
+
+### Business Requirements 1 – Data visualisation and correlation study
+-	I will inspect the opening and closing value of exchange rate
+-	I create the difference between the two values for each day
+-	I will conduct a correlation study to understand better the correlation to the expectation of client
+-	I will plot the trend of differences in a diagram
+### Business Requirements 2 – Data visualisation and correlation study
+-	I will inspect the difference between the closing value on 1st January and 31th October, and the difference between the closing values on 1st November and 31th December
+-	I will compare these values annually
+-	I will conduct a correlation study to understand better the correlation to the expectation of client
+-	I will plot the annual values in a diagram
+### Business Requirements 3 - Data visualisation and correlation study
+-	I will inspect the difference between the closing value on 1st January and 31th December in every year
+-	I will make an annual comparison of these data
+-	after the comparison, I will try to determine the last year of the cycle when the exchange rate falls compared to the previous years with correlation study
+-	I will plot the annual values in a diagram
+### Business Requirements 4 - Data visualisation and correlation study
+-	I will inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
+-	I will make an annual comparison of these data with a correlation study
+-	I will plot the annual values in a diagram
+
+## ML Business case
+
+### Predict the changes of differences between opening and closing exchange rates
+
+My ML model to predict the changes of decreasing differences between opening and closing exchange rates based on historical data. A target variable is a number. I consider a regression model which is supervised and uni-dimensional. I suppose taht as the exchange rate rises, the difference between the opening and closing values will be smaller than with a lower exchange rate.
+The ideal outcome is to provide value of differences of exchange rates and could help the client decide whether to sell or buy.
+The model success metric is at least 0.7 R2 score on train and test set.
+The ML model is considered a failure if the value of the differences of opening and closing value of exchange rate will increase significantly.
+Heuristics: currently, there is no approach for predict the changes of value of the differences of exchange rate.
+
+## Dashboard design
+The structure of dashboard follow the list as you find below:
+-	Page 1: project summary
+    - client's requirements
+    - description of project dataset
+    - Terms and jargons of the project
+-	Page 2: displaying how I used data analytics to solve the business requirements
+-	Page 3: displaying how I used ML to solve the business requirements
+-	Page 4: indicating my project hypothesis and how I validated it across the project
+-	Page 5: A technical page displaying my model performance, assuming I used ML to solve a business requirement
+
+## Unfixed bugs
+
+## Deployment
+The steps of the publishing on the Heroku were as follow:
+    
+    1. I created an app name and set the location (Europe)
+    2. In the **"Settings"** I managed the config vars part
+![My Image](assets/images/settings%20config%20vars.jpg)
+    3. In the buildpacks I chose heroku/python
+    4. In the Deploy section I create a connection between GitHub and Heroku
+    5. With the Deploy Branch button I created a deployed app
+![My Image](assets/images/deploy_heroku.jpg)
+    6. The website was published on Heroku Page and the link was provided in the same section.
+## Main Data Analysis and Machine Learning Libraries
+
+## Credits
+	Content
+
+## Acknowledgements
+ 
+
+
+
+
 
 ## Gitpod Reminders
 
