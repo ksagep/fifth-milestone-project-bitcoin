@@ -1,26 +1,45 @@
 # Bitcoin – currency of matrix
 
+Crypto currencies are very popular, many people mine them, but even more people trade them. This inspired me to develop the project and use predictive analytics. In predictive analytics, there is the possibility of extracting different information from the available data and databases, thereby creating the opportunity to reach a wide range of customers. In my opinion, this field will develop dynamically in the future, on the one hand thanks to increasingly diverse and more easily accessible databases, and on the other hand thanks to the performance of more advanced computers.
+
+![My Image](assets/images/i_am_responsive.jpg)
+
+## What does this website do?
+
+The purpose of the project is to help a friend of mine find answers who wants to trade Bitcoin among the crypto currencies in the future.
+
+For link to this website click [Here](https://.herokuapp.com/).
+
+# Planning Phase
+
+## Business requirements
+
+A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.). In her opinion, the price of Bitcoin will rise significantly in the next period. She asked me to look for answers to his questions from the database available to her. Her database is open-sourced and shared only with me for this project.
+
+### The project goals are:
+- Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
+
+- To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+
 ## Dataset Content
 
 The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace. The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange . The data set includes information about:
 -	Open and closing prices which are show how the exchange rate developed during the given day;
 -	The highest and lowest exchange rate value during the given day.
 
-Variable	Meaning	Units
-Date	given date of day	date
-Closing Price (USD)	exchange rate value when the market closed	109,58 - 63347,80
-24h Open (USD)	exchange rate value when the market opened	109,58 - 63563,67
-24h High (USD)	the highest value of exchange rate on the given day	119,67 - 64802,79
-24h Low (USD)	the lowest value of exchange rate on the given day	84,33 - 62095,63
+|      Variable        	|                      Meaning           	         |       Units 	     |   	
+|---------------------	|--------------------------------------------------  |----------------   |
+| Date                	| Given date of day 	                             | Date  	         |
+| Closing Price (USD) 	| exchange rate value when the market closed  	     | 109,58 - 63347,80 |   	
+| 24h Open (USD)     	| exchange rate value when the market opened 	     | 109,58 - 63563,67 |
+| 24h High (USD) 	    | the highest value of exchange rate on the given day| 119,67 - 64802,79 |
+| 24h Low (USD)     	| the lowest value of exchange rate on the given day | 84,33 - 62095,63  |
 
 ## Project Terms and Jargon
 -	Exchange rate: the value of rate between Bitcoin and USD on the given day
 -	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
 
-## Business requirements / User storie
 
-A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.).
-In her opinion, the price of Bitcoin will rise significantly in the next period, so she wants to know in which period of the year, or when the market opens or closes, it is worth dealing with buying and selling. She is also interested in whether or not she can expect a higher exchange rate in the last two months of the year because of Black Friday and the holidays. According to her information, the Bitcoin exchange rate changes with a four-year cycle, which may have an influence on cryptocurrency trading. She asked me to look for answers to his questions from the database available to her. Her database is open-sourced and shared only with me for this project.
 
 ## Hypothesis and how to validate?
 
