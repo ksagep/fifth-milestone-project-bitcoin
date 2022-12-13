@@ -23,7 +23,8 @@ A friend of mine has a successful business and has been making a lot of money re
 
 ## Dataset Content
 
-The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace. The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange . The data set includes information about:
+The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
+The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange. The data set includes information about:
 -	Open and closing prices which are show how the exchange rate developed during the given day;
 -	The highest and lowest exchange rate value during the given day.
 
@@ -39,50 +40,39 @@ The dataset is sourced from Kaggle. I created a fictitious user story where pred
 -	Exchange rate: the value of rate between Bitcoin and USD on the given day
 -	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
 
-
-
 ## Hypothesis and how to validate?
 
-1.	According to my friend, the opening price is lower than the closing price, so it is advisable to buy closer to the opening time. As a result of the events of the day, the exchange rate rises, so you should sell the available Bitcoin at a time close to the closing in the hope of the greatest possible profit.
-	Validation: determine the difference between the opening and closing values for each day (or for which data is available) and examine their tendency. If the received value is positive, then there was an increase during the day, but in the case of a negative value, the exchange rate decreased. This will be validated with a correlation study. Use diagrams for visualisation.
-2.	Can we expect a higher exchange rate in the last two months of the year due to Black Friday and the holidays than in the previous 10 months?
-	Validation: To examine the difference between the closing value on 1st January and 31th October, and to compare this value annually with the difference between the closing values on 1st November and 31th December. This will be validated with a correlation study.
-3.	Every fourth year, the price of Bitcoin falls compared to the previous three years, so it is worth selling in the first three years of the four-year cycle, and buying in the fourth year.
-	Validation: To examine the difference between the closing value on 1st January and 31th December in every year and to make an annual comparison based on the available data. If it is possible to identify the year in which the exchange rate decreases, the cyclicality can be established. This will be validated with a correlation study.
-4.	As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
-	Validation: To examine the difference between the opening and closing value on 1st January, 30th June and 31th December in every year and to make comparison based on the available data. This will be validated with a correlation study. Use diagrams for visualisation.
+1.	The opening price is lower than the closing price.
+	Validation: This will be validated with a correlation study and use diagrams for visualisation.
+
+2.	As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+    Validation: This will be validated with a correlation study. Use diagrams for visualisation.
+
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
 ### Business Requirements 1 – Data visualisation and correlation study
+
 -	I will inspect the opening and closing value of exchange rate
 -	I create the difference between the two values for each day
 -	I will conduct a correlation study to understand better the correlation to the expectation of client
--	I will plot the trend of differences in a diagram
-### Business Requirements 2 – Data visualisation and correlation study
--	I will inspect the difference between the closing value on 1st January and 31th October, and the difference between the closing values on 1st November and 31th December
--	I will compare these values annually
--	I will conduct a correlation study to understand better the correlation to the expectation of client
--	I will plot the annual values in a diagram
-### Business Requirements 3 - Data visualisation and correlation study
--	I will inspect the difference between the closing value on 1st January and 31th December in every year
--	I will make an annual comparison of these data
--	after the comparison, I will try to determine the last year of the cycle when the exchange rate falls compared to the previous years with correlation study
--	I will plot the annual values in a diagram
-### Business Requirements 4 - Data visualisation and correlation study
--	I will inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
--	I will make an annual comparison of these data with a correlation study
+-	I will plot the trends of differences in diagrams
+
+### Business Requirements 2 – Prediction
+
+-	I will inspect the difference between the opening and closing value on 1st January and 31th December in every year
+-	I will make an annual comparison of the aforementioned data
 -	I will plot the annual values in a diagram
 
 ## ML Business case
-
 ### Predict the changes of differences between opening and closing exchange rates
 
-My ML model to predict the changes of decreasing differences between opening and closing exchange rates based on historical data. A target variable is a number. I consider a regression model which is supervised and uni-dimensional. I suppose taht as the exchange rate rises, the difference between the opening and closing values will be smaller than with a lower exchange rate.
-The ideal outcome is to provide value of differences of exchange rates and could help the client decide whether to sell or buy.
-The model success metric is at least 0.7 R2 score on train and test set.
-The ML model is considered a failure if the value of the differences of opening and closing value of exchange rate will increase significantly.
-Heuristics: currently, there is no approach for predict the changes of value of the differences of exchange rate.
+- My ML model to predict the changes of decreasing differences between opening and closing exchange rates based on historical data. A target variable is a number. I consider a regression model which is supervised and uni-dimensional. I suppose taht as the exchange rate rises, the difference between the opening and closing values will be smaller than with a lower exchange rate.
+- The model success metric are:
+    - The ideal outcome is to provide value of differences of exchange rates and could help the client decide whether to sell or buy.
+    - The model success metric is at least 0.7 R2 score on train and test set.
+- The ML model is considered a failure if the value of the differences of opening and closing value of exchange rate will increase significantly.
+- Heuristics: currently, there is no approach for predict the changes of value of the differences of exchange rate.
 
 ## Dashboard design
 The structure of dashboard follow the list as you find below:
@@ -108,13 +98,38 @@ The steps of the publishing on the Heroku were as follow:
     5. With the Deploy Branch button I created a deployed app
 ![My Image](assets/images/deploy_heroku.jpg)
     6. The website was published on Heroku Page and the link was provided in the same section.
+
 ## Main Data Analysis and Machine Learning Libraries
+- jupyter notebook - used for writing and running the ML pipelines
+- numpy - used for array manipulation
+- pandas - used to structure the data
+- matplotlib - for creating the charts and plots for data visaulization
+- seaborn - used in conjuction with matplotplib for data visualization
+- plotly - used for ploting charts for data visualization
+- streamlit - for the dashboard development
+- scikit-learn - used for data processing
+
+## Other Frameworks, Libraries & Programs Used
+Git - used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub
+GitHub: - used to store the projects code after being pushed from Git
+GitPod - Workspace used for the project
+AmIResponsive - Used to generate responsive image used in README file
+Heroku - Deployment platform for the project
 
 ## Credits
-	Content
+### Content:
+    - Code Institute course materials
+    - Code Institute Slack Community for some helps
+    - Code Institute Mentor meetings and support
+    - Code Institute tutor support
+### Media:
+    - Am I Responsive for a responsive image in README 
+    - I took pictures 
+    - I took the placeholder picture
 
 ## Acknowledgements
- 
+I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
+I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
 
 
 
