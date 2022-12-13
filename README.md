@@ -67,7 +67,8 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 
 ## Dashboard design
 The structure of dashboard follow the list as you find below:
--	### Page 1: Short project summary
+
+   ### Page 1: Short project summary
         - This page is showing the dataset summary and the business requirements as well as the terms of jargons for better understanding.
 
         - Client's requirements:
@@ -84,36 +85,88 @@ The structure of dashboard follow the list as you find below:
             -	Exchange rate: the value of rate between Bitcoin and USD on the given day
             -	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
 
--	### Page 2: displaying how I used data analytics to solve the business requirement
+   ### Page 2: Differences between opening and closing value
         It will answer business requirement 1
         - Lists the findings related to the inspection of the opening and closing value of exchange rate
         - Checkbox 1: Differences between opening and closing value of exchange rate
         - Checkbox 2: Plot the trend of differences in a diagram
 
--	### Page 3: displaying how I used ML to solve the business requirement
+   ### Page 3: Annual comparison
         It will answer business requirement 2
         - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January and 31th December in every year
         - Checkbox 1: Differences between annual comparison of the aformentioned data
         - Checkbox 2: Plot the annual values in a diagram
 
--	### Page 4: Project hypothesis and validation
+   ### Page 4: Project hypothesis and validation
             - Display every hypothesis and their validations
 
--	### Page 5: ML performance metrics
+   ### Page 5: ML performance metrics
             - A technical page which is displaying the model performance
+
+## Features
+The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
+
+   ### Navigation 
+        - The dashboard developed is a multipage streamlit application with sidebar navigation checkbox links.
+        - The navigation links provides quick access to the five pages as follows:
+
+          - Page 1: Short project summary
+          - Page 2: Differences between opening and closing value
+          - Page 3: Annual comparison
+          - Page 4: Project hypothesis and validation
+          - Page 5: ML performance metrics
 
 ## Unfixed bugs
 
 ## Deployment
+
+### Workspace Setup
+The repository for this project was created off the [template](https://github.com/Code-Institute-Solutions/) provided by Code Institute and GitPod workspace was used to develop this project.
+
+- Click the `Use This Template` button.
+- Add a repository name and brief description.
+- Click the `Create Repository from Template` to create your repository.
+- Click `Gitpod` to create a Gitpod workspace.
+- **To return to the current workspace, login to your gitpod acoount and open the workspace created earlier, since clicking on GitPod button on the GitHub page creates a new workpspace each time.**
+
+### Creating Heroku App
+The Python version in the project is set to 3.8.13, which is not supported by Heroku's current default stack, heroku-22.
+As a result of the above, the app was created from Heroku CLI and set to use buildstack heroku-20.
+
+Steps take to create the app is as follows:
+1. Download and install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) if not already installed
+2. Copy API key from heroku
+	- sign in and click on the avatar icon and select **Account Settings**
+	- Scroll down to the API Key section and click **Reveal** button, and copy key displayed.
+3. Login to Heroku via the console and enter your details when prompted
+	`heroku login -i`
+	- enter key copied from step 2 when prompted for password
+4. Create the app
+	`heroku apps:create pp5-mildew-detection --stack heroku-20`
+
+### Deploying to Heroku
+1. Sign in to Heroku
+2. Select app
+3. At the Deploy tab, select GitHub as the deployment method.
+4. Select your repository name and click Search. Once it is found, click Connect.
+5. Select the branch you want to deploy, then click Deploy Branch.
+6. The deployment process should happen smoothly in case all deployment files are fully functional. 
+7. Click the button **Open App** on the top of the page to access your App.
+
+
+
 The steps of the publishing on the Heroku were as follow:
     
     1. I created an app name and set the location (Europe)
+
     2. In the **"Settings"** I managed the config vars part
-![My Image](assets/images/settings%20config%20vars.jpg)
+
     3. In the buildpacks I chose heroku/python
+
     4. In the Deploy section I create a connection between GitHub and Heroku
+
     5. With the Deploy Branch button I created a deployed app
-![My Image](assets/images/deploy_heroku.jpg)
+
     6. The website was published on Heroku Page and the link was provided in the same section.
 
 ## Main Data Analysis and Machine Learning Libraries
@@ -127,11 +180,12 @@ The steps of the publishing on the Heroku were as follow:
 - scikit-learn - used for data processing
 
 ## Other Frameworks, Libraries & Programs Used
-Git - used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub
-GitHub: - used to store the projects code after being pushed from Git
-GitPod - Workspace used for the project
-AmIResponsive - Used to generate responsive image used in README file
-Heroku - Deployment platform for the project
+
+- Git - used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub
+- GitHub: - used to store the projects code after being pushed from Git
+- GitPod - Workspace used for the project
+- AmIResponsive - Used to generate responsive image used in README file
+- Heroku - Deployment platform for the project
 
 ## Credits
 ### Content:
@@ -145,8 +199,8 @@ Heroku - Deployment platform for the project
     - I took the placeholder picture
 
 ## Acknowledgements
-I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
-I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
+    I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
+    I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
 
 
 
