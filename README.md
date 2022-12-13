@@ -58,32 +58,49 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 -	I will conduct a correlation study to understand better the correlation to the expectation of client
 -	I will plot the trends of differences in diagrams
 
-### Business Requirements 2 – Prediction
+### Business Requirements 2 - Data visualisation and correlation study
 
--	I will inspect the difference between the opening and closing value on 1st January and 31th December in every year
--	I will make an annual comparison of the aforementioned data
--	I will plot the annual values in a diagram
+-   I will inspect the difference between the opening and closing value on 1st January and 31th December in every year
+-   I will make an annual comparison of these data with a correlation study
+-   I will plot the annual values in a diagram
 
-## ML Business case
-### Predict the changes of differences between opening and closing exchange rates
-
-- My ML model to predict the changes of decreasing differences between opening and closing exchange rates based on historical data. A target variable is a number. I consider a regression model which is supervised and uni-dimensional. I suppose taht as the exchange rate rises, the difference between the opening and closing values will be smaller than with a lower exchange rate.
-- The model success metric are:
-    - The ideal outcome is to provide value of differences of exchange rates and could help the client decide whether to sell or buy.
-    - The model success metric is at least 0.7 R2 score on train and test set.
-- The ML model is considered a failure if the value of the differences of opening and closing value of exchange rate will increase significantly.
-- Heuristics: currently, there is no approach for predict the changes of value of the differences of exchange rate.
 
 ## Dashboard design
 The structure of dashboard follow the list as you find below:
--	Page 1: project summary
-    - client's requirements
-    - description of project dataset
-    - Terms and jargons of the project
--	Page 2: displaying how I used data analytics to solve the business requirements
--	Page 3: displaying how I used ML to solve the business requirements
--	Page 4: indicating my project hypothesis and how I validated it across the project
--	Page 5: A technical page displaying my model performance, assuming I used ML to solve a business requirement
+-	### Page 1: Short project summary
+        - This page is showing the dataset summary and the business requirements as well as the terms of jargons for better understanding.
+
+        - Client's requirements:
+            - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
+            - To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+
+        - Description of project dataset:
+            - The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
+            - The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange. The data set includes information about:
+                -	Open and closing prices which are show how the exchange rate developed during the given day;
+                -	The highest and lowest exchange rate value during the given day.
+
+        - Terms and jargons of the project:
+            -	Exchange rate: the value of rate between Bitcoin and USD on the given day
+            -	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
+
+-	### Page 2: displaying how I used data analytics to solve the business requirement
+        It will answer business requirement 1
+        - Lists the findings related to the inspection of the opening and closing value of exchange rate
+        - Checkbox 1: Differences between opening and closing value of exchange rate
+        - Checkbox 2: Plot the trend of differences in a diagram
+
+-	### Page 3: displaying how I used ML to solve the business requirement
+        It will answer business requirement 2
+        - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January and 31th December in every year
+        - Checkbox 1: Differences between annual comparison of the aformentioned data
+        - Checkbox 2: Plot the annual values in a diagram
+
+-	### Page 4: Project hypothesis and validation
+            - Display every hypothesis and their validations
+
+-	### Page 5: ML performance metrics
+            - A technical page which is displaying the model performance
 
 ## Unfixed bugs
 
