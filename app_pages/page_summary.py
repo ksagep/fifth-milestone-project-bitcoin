@@ -16,6 +16,11 @@ def page_summary_body():
         f"Each **column** contains different information about rate of exchange.\n"
         f"The data set includes information about:\n"
         f"Open and closing prices which are show how the exchange rate developed during the given day.\n"
-        f"The highest and lowest exchange rate value during the given day.\n"
-    )
+        f"The highest and lowest exchange rate value during the given day.\n")
 
+# Business requirements section
+    st.success(
+        f"The project has two business requirements:\n"
+        f"- Verify the client's assumption that the daily opening price is always lower than the closing price,\n"
+        f"so it is worth selling the cryptocurrency at the end of the day.\n" 
+        f"- To prove as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.")
