@@ -77,13 +77,14 @@ The structure of dashboard follow the list as you find below:
 
         - Description of project dataset:
             - The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
-            - The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange. The data set includes information about:
+            - The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about rate of exchange. The data set includes information about:
                 -	Open and closing prices which are show how the exchange rate developed during the given day;
                 -	The highest and lowest exchange rate value during the given day.
 
         - Terms and jargons of the project:
             -	Exchange rate: the value of rate between Bitcoin and USD on the given day
-            -	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
+            -	Open prices: the value of Bitcoin in USD at market open on given day
+            -   Closing prices: the value of Bitcoin in USD at market close on given day
 
    ### Page 2: Differences between opening and closing value
         It will answer business requirement 1
