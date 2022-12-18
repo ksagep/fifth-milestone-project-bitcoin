@@ -100,10 +100,7 @@ The structure of dashboard follow the list as you find below:
    ### Page 4: Project hypothesis and validation
             - Display every hypothesis and their validations
 
-   ### Page 5: ML performance metrics
-            - A technical page which is displaying the model performance
-
-## Features
+   ## Features
 The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
 
    ### Navigation 
