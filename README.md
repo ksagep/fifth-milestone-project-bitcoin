@@ -1,12 +1,13 @@
 # Bitcoin – currency of matrix
 
-Crypto currencies are very popular, many people mine them, but even more people trade them. This inspired me to develop the project and use predictive analytics. In predictive analytics, there is the possibility of extracting different information from the available data and databases, thereby creating the opportunity to reach a wide range of customers. In my opinion, this field will develop dynamically in the future, on the one hand thanks to increasingly diverse and more easily accessible databases, and on the other hand thanks to the performance of more advanced computers.
+Crypto currencies are very popular nowadays, many people "mine" them, but even more people trade them. This inspired me to develop the project and use predictive analytics. It is a constantly changing and dynamically developing field that is full of challenges. Cryptocurrencies are affected by events in the world in the same way as real currencies. 
+In predictive analytics, there is the possibility of extracting different information from the available data and databases, thereby creating the opportunity to reach a wide range of customers. In my opinion, this field will develop dynamically in the future, on the one hand thanks to increasingly diverse and more easily accessible databases, and on the other hand thanks to the performance of more advanced computers.
 
-![My Image](assets/images/i_am_responsive.jpg)
+![My Image](assets/images/i_am_responsive.jpg) I could upload this after deployment.
 
 ## What does this website do?
 
-The purpose of the project is to help a friend of mine find answers who wants to trade Bitcoin among the crypto currencies in the future.
+The purpose of the project is to help a friend of mine find answers who wants to trade Bitcoin in the future.
 
 For link to this website click [Here](https://.herokuapp.com/).
 
@@ -14,7 +15,7 @@ For link to this website click [Here](https://.herokuapp.com/).
 
 ## Business requirements
 
-A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.). In her opinion, the price of Bitcoin will rise significantly in the next period. She asked me to look for answers to his questions from the database available to her. Her database is open-sourced and shared only with me for this project.
+A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.). In her opinion, the price of Bitcoin will rise significantly in the next period. She asked me to look for answers to her questions from the database available to her. Her database is open-sourced and shared only with me for this project.
 
 ### The project goals are:
 - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
@@ -23,7 +24,7 @@ A friend of mine has a successful business and has been making a lot of money re
 
 ## Dataset Content
 
-The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
+The dataset is sourced from *Kaggle*. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
 The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange. The data set includes information about:
 -	Open and closing prices which are show how the exchange rate developed during the given day;
 -	The highest and lowest exchange rate value during the given day.
@@ -36,9 +37,12 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 | 24h High (USD) 	    | the highest value of exchange rate on the given day| 119,67 - 64802,79 |
 | 24h Low (USD)     	| the lowest value of exchange rate on the given day | 84,33 - 62095,63  |
 
+The types of data are as follows: **currency and date** are *object*, the **different prices** are *float64*. I transformed the type of date in the *Data collection phase* from object to float64 (numeric) because easier to manage this type of data during the studies. 
+
 ## Project Terms and Jargon
 -	Exchange rate: the value of rate between Bitcoin and USD on the given day
--	Open and closing prices: the value of Bitcoin in USD at market open and close on that day
+-	Open prices: the value of Bitcoin in USD at market open on given day
+-   Closing prices: the value of Bitcoin in USD at market close on given day
 
 ## Hypothesis and how to validate?
 
@@ -69,7 +73,7 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 The structure of dashboard follow the list as you find below:
 
    ### Page 1: Short project summary
-        - This page is showing the dataset summary and the business requirements as well as the terms of jargons for better understanding.
+        - This page is showing the **dataset summary and the business requirements** as well as **the terms of jargons** for better understanding.
 
         - Client's requirements:
             - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
@@ -102,18 +106,17 @@ The structure of dashboard follow the list as you find below:
             - Display every hypothesis and their validations
 
    ## Features
-The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
+        The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
 
    ### Navigation 
         - The dashboard developed is a multipage streamlit application with sidebar navigation checkbox links.
-        - The navigation links provides quick access to the five pages as follows:
+        - The navigation links provides quick access to the four pages as follows:
 
           - Page 1: Short project summary
           - Page 2: Differences between opening and closing value
           - Page 3: Annual comparison
           - Page 4: Project hypothesis and validation
-          - Page 5: ML performance metrics
-
+          
 ## Unfixed bugs
 
 ## Deployment
@@ -127,45 +130,17 @@ The repository for this project was created off the [template](https://github.co
 - Click `Gitpod` to create a Gitpod workspace.
 - **To return to the current workspace, login to your gitpod acoount and open the workspace created earlier, since clicking on GitPod button on the GitHub page creates a new workpspace each time.**
 
-### Creating Heroku App
-The Python version in the project is set to 3.8.13, which is not supported by Heroku's current default stack, heroku-22.
-As a result of the above, the app was created from Heroku CLI and set to use buildstack heroku-20.
-
-Steps take to create the app is as follows:
-1. Download and install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) if not already installed
-2. Copy API key from heroku
-	- sign in and click on the avatar icon and select **Account Settings**
-	- Scroll down to the API Key section and click **Reveal** button, and copy key displayed.
-3. Login to Heroku via the console and enter your details when prompted
-	`heroku login -i`
-	- enter key copied from step 2 when prompted for password
-4. Create the app
-	`heroku apps:create pp5-mildew-detection --stack heroku-20`
-
 ### Deploying to Heroku
-1. Sign in to Heroku
-2. Select app
-3. At the Deploy tab, select GitHub as the deployment method.
-4. Select your repository name and click Search. Once it is found, click Connect.
-5. Select the branch you want to deploy, then click Deploy Branch.
-6. The deployment process should happen smoothly in case all deployment files are fully functional. 
-7. Click the button **Open App** on the top of the page to access your App.
+* The project was deployed to Heroku using the following steps.
 
-
-
-The steps of the publishing on the Heroku were as follow:
-    
-    1. I created an app name and set the location (Europe)
-
-    2. In the **"Settings"** I managed the config vars part
-
-    3. In the buildpacks I chose heroku/python
-
-    4. In the Deploy section I create a connection between GitHub and Heroku
-
-    5. With the Deploy Branch button I created a deployed app
-
-    6. The website was published on Heroku Page and the link was provided in the same section.
+1. Log in to Heroku and create an App and set the location (Europe).
+2. In the **"Settings"** manage the config vars part.
+3. In the buildpacks I chose heroku/python
+4. At the Deploy tab, select GitHub as the deployment method.
+5. Select my repository name and click Search. Once it is found, click Connect.
+6. Select the branch you want to deploy, then click Deploy Branch.
+7. The deployment process should happen smoothly if all deployment files are fully functional.
+8. Click the button **Open App** on the top of the page to access my App. The App live link is: https://MY_APP_NAME.herokuapp.com/ 
 
 ## Main Data Analysis and Machine Learning Libraries
 - jupyter notebook - used for writing and running the ML pipelines
@@ -175,7 +150,6 @@ The steps of the publishing on the Heroku were as follow:
 - seaborn - used in conjuction with matplotplib for data visualization
 - plotly - used for ploting charts for data visualization
 - streamlit - for the dashboard development
-- scikit-learn - used for data processing
 
 ## Other Frameworks, Libraries & Programs Used
 
@@ -199,33 +173,3 @@ The steps of the publishing on the Heroku were as follow:
 ## Acknowledgements
     I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
     I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
-
-
-
-
-
-## Gitpod Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-
-
-## Deployment
-### Heroku
-
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.

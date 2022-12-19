@@ -18,7 +18,7 @@ def page_summary_body():
         f"Open and closing prices which are show how the exchange rate developed during the given day.\n"
         f"The highest and lowest exchange rate value during the given day.\n")
 
-# Business requirements section
+# Client's requirements section
     st.success(
         f"The project has two business requirements:\n"
         f"- Verify the client's assumption that the daily opening price is always lower than the closing price,\n"
