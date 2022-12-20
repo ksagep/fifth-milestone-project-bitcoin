@@ -13,7 +13,7 @@ def page_study_of_differences_body():
     df = pd.read.csv("outputs/dataset/collection/Bitcoin_Price_Data.csv")
 
     # Code copied from Study of differences Notebook
-    vars_to_study = ['Closing price (USD)', '24h open (USD)']
+    vars_to_study = ['Date', 'Closing price (USD)', '24h open (USD)']
 
     st.write("## Study of differences")
     st.info(
@@ -25,24 +25,24 @@ def page_study_of_differences_body():
 
 # Code copied from Study of differences Notebook
 def prices_differences(df_eda):
-    target_var = ['Date', 'Closing Price (USD)','24h Open (USD)']
+    target_var = ['Closing Price (USD)','24h Open (USD)']
 
     for col in vars_to_study:
     
-        if newdf_eda[col].dtype == 'float64':
-            plot_numerical(newdf_eda, col, target_var)
+        if df_eda[col].dtype == 'float64':
+            plot_numerical(df_eda, col, target_var)
         
         else:
-            plot_categorical(newdf_eda, col, target_var)
+            plot_categorical(df_eda, col, target_var)
 
 # Code copied from Study of differences Notebook     
 def plot_numerical(newdf, col, target_var):
     plt.figure(figsize=(6, 5))
-    sns.histplot(data=newdf, x=col, hue=2787, kde=True, element="step")
+    sns.histplot(data=df, x=col, hue=2787, kde=True, element="step")
     plt.title(f"{col}", fontsize=20, y=1.05)
 
 # Code copied from Study of differences Notebook
 def plot_categorical(newdf, col, target_var):
 
     plt.figure(figsize=(9, 5))
-    sns.regplot(x=newdf["Closing Price (USD)"], y=newdf["24h Open (USD)"])
+    sns.regplot(x=df["Closing Price (USD)"], y=df["24h Open (USD)"])
