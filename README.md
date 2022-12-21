@@ -1,6 +1,6 @@
 # Bitcoin – currency of matrix
 
-Crypto currencies are very popular nowadays, many people "mine" them, but even more people trade them. This inspired me to develop the project and use predictive analytics. It is a constantly changing and dynamically developing field that is full of challenges. Cryptocurrencies are affected by events in the world in the same way as real currencies. 
+Crypto currencies are very popular nowadays, many people "mine" them, but even more people trade them. This inspired me to develop the project and use predictive analytics. It is a constantly changing and dynamically developing field that is full of challenges. Crypto currencies are affected by events in the world in the same way as real currencies. 
 In predictive analytics, there is the possibility of extracting different information from the available data and databases, thereby creating the opportunity to reach a wide range of customers. In my opinion, this field will develop dynamically in the future, on the one hand thanks to increasingly diverse and more easily accessible databases, and on the other hand thanks to the performance of more advanced computers.
 
 ![My Image](assets/images/i_am_responsive.jpg) I could upload this after deployment.
@@ -18,7 +18,7 @@ For link to this website click [Here](https://.herokuapp.com/).
 A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.). In her opinion, the price of Bitcoin will rise significantly in the next period. She asked me to look for answers to her questions from the database available to her. Her database is open-sourced and shared only with me for this project.
 
 ### The project goals are:
-- Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
+- Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the crypto currency at the end of the day. or buy it
 
 - To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
 
@@ -64,7 +64,7 @@ The types of data are as follows: **currency and date** are *object*, the **diff
 
 ### Business Requirements 2 - Data visualisation and correlation study
 
--   I will inspect the difference between the opening and closing value on 1st January and 31th December in every year
+-   I will inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
 -   I will make an annual comparison of these data with a correlation study
 -   I will plot the annual values in a diagram
 
@@ -109,7 +109,7 @@ The structure of dashboard follow the list as you find below:
         The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
 
    ### Navigation 
-        - The dashboard developed is a multipage streamlit application with sidebar navigation checkbox links.
+        - The dashboard developed is a multipage streamlit application with sidebar navigation and checkbox links.
         - The navigation links provides quick access to the four pages as follows:
 
           - Page 1: Short project summary
