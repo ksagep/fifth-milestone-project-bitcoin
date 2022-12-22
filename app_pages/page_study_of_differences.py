@@ -6,26 +6,28 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("whitegrid")
 
+
 def page_study_of_differences_body():
 
     # load the data
-    df = pd.read.csv("outputs/dataset/collection/Bitcoin_Price_Data.csv")
-
+    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    
     # Code copied from Study of differences Notebook
-    vars_to_study = ['Date', 'Closing price (USD)', '24h open (USD)']
-
+    vars_to_study = ['Closing price (USD)', '24h open (USD)']
+    
     st.write("## Study of differences")
     st.info(
-        f"The client interested to understand the patterns from differences between opening and closing prices\n"
+        f"The client interested to understand the patterns from **differences between opening and closing prices**\n"
         f"so the client can realize or decide the most relevant variables which are correlated as best option to sell Bitcoins.")
 
     if st.checkbox("Correlation between opening and closing price"):
+        df_eda = df.filter(vars_to_study)
         prices_differences(df_eda)
-
+       
 # Code copied from Study of differences Notebook
 def prices_differences(df_eda):
     target_var = ['Closing Price (USD)','24h Open (USD)']
-
+    
     for col in vars_to_study:
     
         if df_eda[col].dtype == 'float64':

@@ -7,7 +7,7 @@ import seaborn as sns
 def page_study_of_annual_comparison_body():
 
     # load the data
-    df = pd.read.csv("outputs/dataset/collection/Bitcoin_Price_Data.csv")
+    df = "outputs/dataset/collection/Bitcoin_Price_Data.csv"
 
     # filter the dataset for comparison
     newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
@@ -19,7 +19,7 @@ def page_study_of_annual_comparison_body():
     st.write("## Study of annual comparison")
     st.info(
         f"The client would like to know:\n"
-        f"as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.")
+        f"As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.")
 
     if st.checkbox("Annual comparison between opening and closing price"):
         annual_comparison(df_eda)

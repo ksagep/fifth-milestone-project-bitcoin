@@ -13,7 +13,7 @@ app = MultiPage(app_name="Bitcoin - currency of matrix")
 # Add the pages to the app
 app.add_page("Short project summary", page_summary_body)
 app.add_page("Study of differences", page_study_of_differences_body)
-app.add_page("Study of annualcomparison", page_study_of_annual_comparison_body)
+app.add_page("Study of annual comparison", page_study_of_annual_comparison_body)
 app.add_page("Project hypothesis and validation", page_project_hypothesis_and_validation_body)
 
 # Run the app

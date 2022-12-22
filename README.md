@@ -20,7 +20,7 @@ A friend of mine has a successful business and has been making a lot of money re
 ### The project goals are:
 - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the crypto currency at the end of the day. or buy it
 
-- To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+- The client would like to know that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
 
 ## Dataset Content
 
