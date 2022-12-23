@@ -14,27 +14,20 @@ def page_study_of_differences_body():
     
     # Code copied from Study of differences Notebook
     vars_to_study = ['Closing price (USD)', '24h open (USD)']
-    
+
     st.write("## Study of differences")
     st.info(
         f"The client interested to understand the patterns from **differences between opening and closing prices**\n"
         f"so the client can realize or decide the most relevant variables which are correlated as best option to sell Bitcoins.")
 
     if st.checkbox("Correlation between opening and closing price"):
-        df_eda = df.filter(vars_to_study)
+        df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
         prices_differences(df_eda)
        
-# Code copied from Study of differences Notebook
-def prices_differences(df_eda):
-    target_var = ['Closing Price (USD)','24h Open (USD)']
-    
-    for col in vars_to_study:
-    
-        if df_eda[col].dtype == 'float64':
-            plot_numerical(df_eda, col, target_var)
-        
-        else:
-            plot_categorical(df_eda, col, target_var)
+def df_eda():
+    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    vars_to_study = ['Closing price (USD)', '24h open (USD)']
+    df_eda = df.filter(vars_to_study)
 
 # Code copied from Study of differences Notebook     
 def plot_numerical(newdf, col, target_var):
@@ -44,6 +37,14 @@ def plot_numerical(newdf, col, target_var):
 
 # Code copied from Study of differences Notebook
 def plot_categorical(newdf, col, target_var):
-
+    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
     plt.figure(figsize=(9, 5))
     sns.regplot(x=df["Closing Price (USD)"], y=df["24h Open (USD)"])
+
+# Code copied from Study of differences Notebook
+def prices_differences(df_eda):
+    target_var = ['Closing Price (USD)','24h Open (USD)']
+    vars_to_study = ['Closing price (USD)', '24h open (USD)']
+    for col in vars_to_study:
+        df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+        plot_categorical(df_eda, col, target_var)

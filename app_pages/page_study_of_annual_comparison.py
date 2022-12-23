@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from datetime import datetime
 
 def page_study_of_annual_comparison_body():
 
@@ -10,7 +11,9 @@ def page_study_of_annual_comparison_body():
     df = "outputs/dataset/collection/Bitcoin_Price_Data.csv"
 
     # filter the dataset for comparison
-    newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
+    date = df.Date
+    date_conv = date.strftime("%d/%m/%Y")
+    newdf = df[df['date_conv'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
     newdf_eda = newdf.filter(vars_to_study)
 
     # Code copied from Study of differences Notebook
