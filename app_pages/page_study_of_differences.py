@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("whitegrid")
 
-
 def page_study_of_differences_body():
 
     # load the data
@@ -20,31 +19,56 @@ def page_study_of_differences_body():
         f"The client interested to understand the patterns from **differences between opening and closing prices**\n"
         f"so the client can realize or decide the most relevant variables which are correlated as best option to sell Bitcoins.")
 
+# Correlation Study Summary
+    st.write(
+        f"* A correlation study was conducted in the notebook to better understand how "
+        f"the variables are correlated to each other. \n"
+        f"The most correlated variable are: **{vars_to_study}**"
+    )
+
+# Text based on Coclusions of "Study of differences" notebook
+    st.info(
+        f"The correlations and plots interpretation converge. \n"
+        f"The opening prices were higher more times than closing prices, **1450 vs 1337**. \n"
+        f"When the client would like to sell Bitcoin, it is necessary to monitor the development of the exchange rate continuously, \n"
+        f"as well as the events taking place in the world."
+    )
+
+# Code based on EDA on selected variables of "Study of differences" notebook
+
+    def df_eda():
+        df_eda = df.filter(vars_to_study)
+
     if st.checkbox("Correlation between opening and closing price"):
-        df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
-        prices_differences(df_eda)
-       
-def df_eda():
+        
+        price_difference(df_eda)
+
+
+
+# Code copied from Study of differences Notebook
+def price_difference(df_eda):
     df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
-    vars_to_study = ['Closing price (USD)', '24h open (USD)']
-    df_eda = df.filter(vars_to_study)
+    target_var = ['24h Open (USD)', 'Closing Price (USD)']
+    vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
+    for col in vars_to_study:
+        
+        plot_categorical(df_eda, col, target_var)
+        print()
 
 # Code copied from Study of differences Notebook     
-def plot_numerical(newdf, col, target_var):
+def plot_numerical(df, col, target_var):
+    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
     plt.figure(figsize=(6, 5))
     sns.histplot(data=df, x=col, hue=2787, kde=True, element="step")
     plt.title(f"{col}", fontsize=20, y=1.05)
 
 # Code copied from Study of differences Notebook
-def plot_categorical(newdf, col, target_var):
+def plot_categorical(df, col, target_var):
     df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    
+    x = int(df['24h Open (USD)'])
+    y = int(df['Closing Price (USD)'])
+    
     plt.figure(figsize=(9, 5))
-    sns.regplot(x=df["Closing Price (USD)"], y=df["24h Open (USD)"])
-
-# Code copied from Study of differences Notebook
-def prices_differences(df_eda):
-    target_var = ['Closing Price (USD)','24h Open (USD)']
-    vars_to_study = ['Closing price (USD)', '24h open (USD)']
-    for col in vars_to_study:
-        df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
-        plot_categorical(df_eda, col, target_var)
+    sns.regplot(x, y)
+    plt.show()
