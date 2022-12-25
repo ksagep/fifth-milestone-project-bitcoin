@@ -43,15 +43,12 @@ def page_study_of_differences_body():
         
         price_difference(df_eda)
 
-
-
 # Code copied from Study of differences Notebook
 def price_difference(df_eda):
     df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
     target_var = ['24h Open (USD)', 'Closing Price (USD)']
     vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
     for col in vars_to_study:
-        
         plot_categorical(df_eda, col, target_var)
         print()
 
