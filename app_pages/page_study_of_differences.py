@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import math
 import seaborn as sns
 sns.set_style("whitegrid")
 
@@ -63,9 +64,9 @@ def plot_numerical(df, col, target_var):
 def plot_categorical(df, col, target_var):
     df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
     
-    x = int(df['24h Open (USD)'])
-    y = int(df['Closing Price (USD)'])
-    
+    x = df['24h Open (USD)']
+    y = df['24h Open (USD)']
+
     plt.figure(figsize=(9, 5))
     sns.regplot(x, y)
     plt.show()

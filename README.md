@@ -67,7 +67,6 @@ The types of data are as follows: **currency and date** are *object*, the **diff
 -   I will make an annual comparison of these data with a correlation study
 -   I will plot the annual values in a diagram
 
-
 ## Dashboard design
 
 The structure of dashboard follow the list as you find below:
@@ -93,8 +92,7 @@ The structure of dashboard follow the list as you find below:
    ### Page 2: Differences between opening and closing value
         It will answer business requirement 1
         - Lists the findings related to the inspection of the opening and closing value of exchange rate
-        - Checkbox 1: Differences between opening and closing value of exchange rate
-        - Checkbox 2: Plot the trend of differences in a diagram
+        - Checkbox 1: Plot the trend of differences in a diagram
 
    ### Page 3: Annual comparison
         It will answer business requirement 2
@@ -129,7 +127,7 @@ The structure of dashboard follow the list as you find below:
 
 ## Unfixed bugs
 
-In the studies, I used mathematical calculation solutions for better understanding of dataset. These brought interesting outcomes but I could not solve the plotting issue. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I used the math results and supporting values for my studies.
+In the studies, I used mathematical calculation solutions for better understanding of dataset. These brought interesting outcomes but I could not solve the plotting issue. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I used the math results and supported values for my studies.
 
 ## Deployment
 
