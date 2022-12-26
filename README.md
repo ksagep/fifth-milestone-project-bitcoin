@@ -9,7 +9,7 @@ In predictive analytics, there is the possibility of extracting different inform
 
 The purpose of the project is to help a friend of mine find answers who wants to trade Bitcoin in the future.
 
-For link to this website click [Here](https://.herokuapp.com/).
+For link to this website click [Here](https://fifth-milestone-project-bitcoin.herokuapp.com/).
 
 # Planning Phase
 
@@ -18,7 +18,7 @@ For link to this website click [Here](https://.herokuapp.com/).
 A friend of mine has a successful business and has been making a lot of money recently. She would invest part of her savings in cryptocurrency, particularly in Bitcoin. She decided on Bitcoin because it is the cryptocurrency that has been "mined" for the longest time and is mined in the main cryptomines (e.g. USA, Kazakhstan, Russia, etc.). In her opinion, the price of Bitcoin will rise significantly in the next period. She asked me to look for answers to her questions from the database available to her. Her database is open-sourced and shared only with me for this project.
 
 ### The project goals are:
-- Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the crypto currency at the end of the day. or buy it
+- Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the crypto currency at the end of the day. There is a greater chance that the client will be able to buy cryptocurrency at a time close to the opening.
 
 - The client would like to know that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
 
@@ -40,36 +40,36 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 The types of data are as follows: **currency and date** are *object*, the **different prices** are *float64*. I transformed the type of date in the *Data collection phase* from object to float64 (numeric) because easier to manage this type of data during the studies. 
 
 ## Project Terms and Jargon
--	Exchange rate: the value of rate between Bitcoin and USD on the given day
--	Open prices: the value of Bitcoin in USD at market open on given day
--   Closing prices: the value of Bitcoin in USD at market close on given day
+
+-	*Exchange rate*: the value of rate between Bitcoin and USD on the given day
+-	*Open prices*: the value of Bitcoin in USD at market open on given day
+-   *Closing prices*: the value of Bitcoin in USD at market close on given day
 
 ## Hypothesis and how to validate?
 
 1.	The opening price is lower than the closing price.
-	Validation: This will be validated with a correlation study and use diagrams for visualisation.
+	Validation: This will be validated with a correlation study and use diagrams for visualisation. Use mathematical calculation solution for better understanding of dataset. 
 
 2.	As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
-    Validation: This will be validated with a correlation study. Use diagrams for visualisation.
+    Validation: This will be validated with a correlation study. Use diagrams for visualisation. Use mathematical calculation solution for better understanding of dataset.
 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
 ### Business Requirements 1 – Data visualisation and correlation study
-
 -	I will inspect the opening and closing value of exchange rate
 -	I create the difference between the two values for each day
 -	I will conduct a correlation study to understand better the correlation to the expectation of client
 -	I will plot the trends of differences in diagrams
 
 ### Business Requirements 2 - Data visualisation and correlation study
-
 -   I will inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
 -   I will make an annual comparison of these data with a correlation study
 -   I will plot the annual values in a diagram
 
 
 ## Dashboard design
+
 The structure of dashboard follow the list as you find below:
 
    ### Page 1: Short project summary
@@ -98,31 +98,43 @@ The structure of dashboard follow the list as you find below:
 
    ### Page 3: Annual comparison
         It will answer business requirement 2
-        - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January and 31th December in every year
+        - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
         - Checkbox 1: Differences between annual comparison of the aformentioned data
         - Checkbox 2: Plot the annual values in a diagram
 
    ### Page 4: Project hypothesis and validation
-            - Display every hypothesis and their validations
+        - Display every hypothesis and their validations
 
    ## Features
-        The application is designed using streamlit library. It is has a sidebar menu with five navigation links.
-
+        
    ### Navigation 
         - The dashboard developed is a multipage streamlit application with sidebar navigation and checkbox links.
         - The navigation links provides quick access to the four pages as follows:
 
           - Page 1: Short project summary
+            This page contain briefs about Client's requirements, description of project dataset and terms and jargons.
+![My Image](assets/images/short_project_summary.jpg)
+
           - Page 2: Differences between opening and closing value
+            It shows answer business requirement 1. Lists the findings related to the inspection of the opening and closing value of exchange rate.
+![My Image](assets/images/study_of_differences.jpg)
+
           - Page 3: Annual comparison
+            It will answer business requirement 2. Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year.
+![My Image](assets/images/)
+
           - Page 4: Project hypothesis and validation
-          
+            This page shows the project hypothesis and how these were validated across the project.
+![My Image](assets/images/project_hypothesis.jpg)
+
 ## Unfixed bugs
+
+In the studies, I used mathematical calculation solutions for better understanding of dataset. These brought interesting outcomes but I could not solve the plotting issue. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I used the math results and supporting values for my studies.
 
 ## Deployment
 
 ### Workspace Setup
-The repository for this project was created off the [template](https://github.com/Code-Institute-Solutions/) provided by Code Institute and GitPod workspace was used to develop this project.
+The repository for this project was created off the [template](https://github.com/Code-Institute-Solutions/milestone-project-bring-your-own-data) provided by Code Institute and GitPod workspace was used to develop this project.
 
 - Click the `Use This Template` button.
 - Add a repository name and brief description.
@@ -142,7 +154,8 @@ The repository for this project was created off the [template](https://github.co
 7. The deployment process should happen smoothly if all deployment files are fully functional.
 8. Click the button **Open App** on the top of the page to access my App. The App live link is: https://MY_APP_NAME.herokuapp.com/ 
 
-## Main Data Analysis and Machine Learning Libraries
+## Main Data Analysis Libraries
+
 - jupyter notebook - used for writing and running the ML pipelines
 - numpy - used for array manipulation
 - pandas - used to structure the data
@@ -165,11 +178,16 @@ The repository for this project was created off the [template](https://github.co
     - Code Institute Slack Community for some helps
     - Code Institute Mentor meetings and support
     - Code Institute tutor support
+    - W3schools.com for ideas
+    - Geeksforgeeks.com for thoughts
+    - Listendata.com for thoughts
+    - Datacamp.com for ideas
 ### Media:
     - Am I Responsive for a responsive image in README 
-    - I took pictures 
-    - I took the placeholder picture
+    - I took the placeholder pictures from my app for README
+    - I took pictures
 
 ## Acknowledgements
+
     I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
     I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
