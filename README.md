@@ -29,13 +29,13 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 -	Open and closing prices which are show how the exchange rate developed during the given day;
 -	The highest and lowest exchange rate value during the given day.
 
-|      Variable        	|                      Meaning           	         |       Units 	     |   	
-|---------------------	|--------------------------------------------------  |----------------   |
-| Date                	| Given date of day 	                             | Date  	         |
-| Closing Price (USD) 	| exchange rate value when the market closed  	     | 109,58 - 63347,80 |   	
-| 24h Open (USD)     	| exchange rate value when the market opened 	     | 109,58 - 63563,67 |
-| 24h High (USD) 	    | the highest value of exchange rate on the given day| 119,67 - 64802,79 |
-| 24h Low (USD)     	| the lowest value of exchange rate on the given day | 84,33 - 62095,63  |
+|      Variable        	|                      Meaning           	         |       Units 	     |   Range	|
+|:---------------------:|:--------------------------------------------------:|:----------:|:--------------:
+| Date                	| Given date of day 	                             | YY-MM-DD | 2014-03-14 - 2021-10-29 |
+| Closing Price (USD) 	| exchange rate value when the market closed  	     | USD |   	109,58 - 10963347,80|
+| 24h Open (USD)     	| exchange rate value when the market opened 	     | USD |109,58 - 63563,67|
+| 24h High (USD) 	    | the highest value of exchange rate on the given day| USD |119,67 - 64802,79|
+| 24h Low (USD)     	| the lowest value of exchange rate on the given day |  USD |84,33 - 62095,63|
 
 The types of data are as follows: **currency and date** are *object*, the **different prices** are *float64*. I transformed the type of date in the *Data collection phase* from object to float64 (numeric) because easier to manage this type of data during the studies. 
 
