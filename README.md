@@ -115,11 +115,11 @@ The structure of dashboard follow the list as you find below:
 
           - Page 2: Differences between opening and closing value
             It shows answer business requirement 1. Lists the findings related to the inspection of the opening and closing value of exchange rate.
-![My Image](assets/images/study_of_differences.jpg)
+![My Image](assets/images/study_of_diff_basic.jpg)
 
           - Page 3: Annual comparison
             It will answer business requirement 2. Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year.
-![My Image](assets/images/)
+![My Image](assets/images/study_of_annual_basic.jpg)
 
           - Page 4: Project hypothesis and validation
             This page shows the project hypothesis and how these were validated across the project.

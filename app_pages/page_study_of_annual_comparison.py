@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
+import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
@@ -8,11 +9,13 @@ from datetime import datetime
 def page_study_of_annual_comparison_body():
 
     # load the data
-    df = "outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
 
     # filter the dataset for comparison
-    date_conv = df['Date'].strftime("%d/%m/%Y")
-    newdf = df[df['date_conv'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    usecols=range(2,4)
+
+    newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
     
     # Code copied from Study of annual comparison Notebook
     vars_to_study = ['Date', 'Closing price (USD)', '24h open (USD)']
@@ -36,35 +39,35 @@ def page_study_of_annual_comparison_body():
 
 # Code based on EDA on selected variables of Study of annual comparison Notebook
 
-    def df_eda():
+    def newdf_eda():
         newdf_eda = newdf.filter(vars_to_study)
 
     if st.checkbox("Annual comparison between opening and closing price"):
-        annual_comparison(df_eda)
+        annual_comparison(newdf_eda)
 
-# Code copied from Study of annual comparison Notebook
+# Code copied from Study of annual comparison Notebook and adapted to page requirements
 def annual_comparison(df_eda):
     df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
     target_var = ['Date', 'Closing Price (USD)','24h Open (USD)']
     vars_to_study = ['Date', 'Closing Price (USD)', '24h Open (USD)']
     newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
+    newdf_eda = newdf.filter(vars_to_study)
     for col in vars_to_study:
     
-        plot_categorical()
+        plot_categorical(newdf_eda, col, target_var)
         print()
     
 
-# Code copied from Study of annual comparison Notebook     
+# Code copied from Study of annual comparison Notebook and adapted to page requirements
 def plot_numerical(newdf, col, target_var):
     plt.figure(figsize=(6, 5))
     sns.histplot(data=newdf, x=col, hue=2787, kde=True, element="step")
     plt.title(f"{col}", fontsize=20, y=1.05)
 
-# Code copied from Study of annual comparison Notebook
+# Code copied from Study of annual comparison Notebook and adapted to page requirements
 def plot_categorical(newdf, col, target_var):
-
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
     plt.figure(figsize=(9, 5))
-    sns.regplot(x=newdf["Closing Price (USD)"], y=newdf["24h Open (USD)"])
-
-
-
+    sns.regplot(x=newdf["24h Open (USD)"], y=newdf["Closing Price (USD)"])
+    plt.show()
