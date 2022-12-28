@@ -13,8 +13,7 @@ def page_study_of_annual_comparison_body():
     # filter the dataset for comparison
     date_conv = df['Date'].strftime("%d/%m/%Y")
     newdf = df[df['date_conv'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
-    newdf_eda = newdf.filter(vars_to_study)
-
+    
     # Code copied from Study of annual comparison Notebook
     vars_to_study = ['Date', 'Closing price (USD)', '24h open (USD)']
 

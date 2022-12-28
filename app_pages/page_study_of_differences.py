@@ -10,7 +10,7 @@ sns.set_style("whitegrid")
 def page_study_of_differences_body():
 
     # load the data
-    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
     
     # Code copied from Study of differences Notebook
     vars_to_study = ['Closing price (USD)', '24h open (USD)']
@@ -46,27 +46,18 @@ def page_study_of_differences_body():
 
 # Code copied from Study of differences Notebook
 def price_difference(df_eda):
-    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
     target_var = ['24h Open (USD)', 'Closing Price (USD)']
     vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
     for col in vars_to_study:
+    
         plot_categorical(df_eda, col, target_var)
         print()
 
-# Code copied from Study of differences Notebook     
-def plot_numerical(df, col, target_var):
-    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
-    plt.figure(figsize=(6, 5))
-    sns.histplot(data=df, x=col, hue=2787, kde=True, element="step")
-    plt.title(f"{col}", fontsize=20, y=1.05)
-
 # Code copied from Study of differences Notebook
 def plot_categorical(df, col, target_var):
-    df = "/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv"
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
     
-    x = df['24h Open (USD)']
-    y = df['24h Open (USD)']
-
     plt.figure(figsize=(9, 5))
-    sns.regplot(x, y)
+    sns.regplot(x=df["24h Open (USD)"], y=df["Closing Price (USD)"])
     plt.show()
