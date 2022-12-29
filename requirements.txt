@@ -1,4 +1,5 @@
 # list of the libraries which I use in the project
+protobuf
 
 numpy
 pandas
