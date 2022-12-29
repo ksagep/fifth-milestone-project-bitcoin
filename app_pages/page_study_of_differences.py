@@ -46,7 +46,7 @@ def page_study_of_differences_body():
 
 # Code copied from Study of differences Notebook
 def price_difference(df_eda):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     target_var = ['24h Open (USD)', 'Closing Price (USD)']
     vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
     for col in vars_to_study:
@@ -56,7 +56,7 @@ def price_difference(df_eda):
 
 # Code copied from Study of differences Notebook
 def plot_categorical(df, col, target_var):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     
     plt.figure(figsize=(9, 5))
     sns.regplot(x=df["24h Open (USD)"], y=df["Closing Price (USD)"])
