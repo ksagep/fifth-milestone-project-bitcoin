@@ -10,7 +10,7 @@ sns.set_style("whitegrid")
 def page_study_of_differences_body():
 
     # load the data
-    df = pd.read_csv("outputs/dataset/collection/Bitcoin_Price_Data.csv")
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
     
     # Code copied from Study of differences Notebook
     vars_to_study = ['Closing price (USD)', '24h open (USD)']
@@ -46,7 +46,7 @@ def page_study_of_differences_body():
 
 # Code copied from Study of differences Notebook
 def price_difference(df_eda):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
     target_var = ['24h Open (USD)', 'Closing Price (USD)']
     vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
     for col in vars_to_study:
@@ -56,7 +56,7 @@ def price_difference(df_eda):
 
 # Code copied from Study of differences Notebook
 def plot_categorical(df, col, target_var):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
     
     plt.figure(figsize=(9, 5))
     sns.regplot(x=df["24h Open (USD)"], y=df["Closing Price (USD)"])
