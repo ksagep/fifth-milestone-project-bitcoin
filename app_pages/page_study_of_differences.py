@@ -10,7 +10,7 @@ sns.set_style("whitegrid")
 def page_study_of_differences_body():
 
     # load the data
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv"))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     
     # Code copied from Study of differences Notebook
     vars_to_study = ['Closing price (USD)', '24h open (USD)']
