@@ -9,10 +9,10 @@ from datetime import datetime
 def page_study_of_annual_comparison_body():
 
     # load the data
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
 
     # filter the dataset for comparison
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     usecols=range(2,4)
 
     newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
@@ -47,13 +47,15 @@ def page_study_of_annual_comparison_body():
 
 # Code copied from Study of annual comparison Notebook and adapted to page requirements
 def annual_comparison(df_eda):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     target_var = ['Date', 'Closing Price (USD)','24h Open (USD)']
     vars_to_study = ['Date', 'Closing Price (USD)', '24h Open (USD)']
     newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
     newdf_eda = newdf.filter(vars_to_study)
     for col in vars_to_study:
     
+        plot_numerical(newdf, col, target_var)
+        print()
         plot_categorical(newdf_eda, col, target_var)
         print()
     
@@ -66,7 +68,7 @@ def plot_numerical(newdf, col, target_var):
 
 # Code copied from Study of annual comparison Notebook and adapted to page requirements
 def plot_categorical(newdf, col, target_var):
-    df = (pd.read_csv("/workspace/fifth-milestone-project-bitcoin/jupyter_notebooks/outputs/dataset/collection/Bitcoin_Price_Data.csv").drop(['24h High (USD)','24h Low (USD)'], axis=1))
+    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
     newdf = df[df['Date'].str.contains('2014-03-14|01-01|06-30|12-31|2021-10-29')]
     plt.figure(figsize=(9, 5))
     sns.regplot(x=newdf["24h Open (USD)"], y=newdf["Closing Price (USD)"])
