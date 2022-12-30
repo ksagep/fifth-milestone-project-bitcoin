@@ -57,15 +57,15 @@ The types of data are as follows: **currency and date** are *object*, the **diff
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
 ### Business Requirements 1 – Data visualisation and correlation study
--	I will inspect the opening and closing value of exchange rate
+-	I inspect the opening and closing value of exchange rate
 -	I create the difference between the two values for each day
--	I will conduct a correlation study to understand better the correlation to the expectation of client
--	I will plot the trends of differences in diagrams
+-	I conduct a correlation study to understand better the correlation to the expectation of client
+-	I plot the trends of differences in diagrams
 
 ### Business Requirements 2 - Data visualisation and correlation study
--   I will inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
--   I will make an annual comparison of these data with a correlation study
--   I will plot the annual values in a diagram
+-   I inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
+-   I make an annual comparison of these data with a correlation study
+-   I plot the annual values in a diagram
 
 ## Dashboard design
 
