@@ -51,18 +51,8 @@ def price_difference(df_eda):
     vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
     for col in vars_to_study:
     
-        plot_numerical(df_eda, col, target_var)
-        print()
-        
         plot_categorical(df_eda, col, target_var)
         print()
-
-# Code copied from Study of differences Notebook
-def plot_numerical(df, col, target_var):
-    plt.figure(figsize=(6, 5))
-    sns.histplot(data=df, x=col, hue=2787, kde=True, element="step")
-    plt.title(f"{col}", fontsize=20, y=1.05)
-    plt.show()
 
 # Code copied from Study of differences Notebook
 def plot_categorical(df, col, target_var):

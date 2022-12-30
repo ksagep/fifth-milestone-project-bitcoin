@@ -54,18 +54,9 @@ def annual_comparison(df_eda):
     newdf_eda = newdf.filter(vars_to_study)
     for col in vars_to_study:
     
-        plot_numerical(newdf, col, target_var)
-        print()
         plot_categorical(newdf_eda, col, target_var)
         print()
-    
-
-# Code copied from Study of annual comparison Notebook and adapted to page requirements
-def plot_numerical(newdf, col, target_var):
-    plt.figure(figsize=(6, 5))
-    sns.histplot(data=newdf, x=col, hue=2787, kde=True, element="step")
-    plt.title(f"{col}", fontsize=20, y=1.05)
-
+  
 # Code copied from Study of annual comparison Notebook and adapted to page requirements
 def plot_categorical(newdf, col, target_var):
     df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data.csv")
