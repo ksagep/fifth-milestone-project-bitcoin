@@ -32,7 +32,7 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 |      Variable        	|                      Meaning           	         |       Units 	     |   Range	|
 |:---------------------:|:--------------------------------------------------:|:----------:|:--------------:
 | Date                	| Given date of day 	                             | YY-MM-DD | 2014-03-14 - 2021-10-29 |
-| Closing Price (USD) 	| exchange rate value when the market closed  	     | USD |   	109,58 - 10963347,80|
+| Closing Price (USD) 	| exchange rate value when the market closed  	     | USD |   	109,58 - 63347,80|
 | 24h Open (USD)     	| exchange rate value when the market opened 	     | USD |109,58 - 63563,67|
 | 24h High (USD) 	    | the highest value of exchange rate on the given day| USD |119,67 - 64802,79|
 | 24h Low (USD)     	| the lowest value of exchange rate on the given day |  USD |84,33 - 62095,63|
