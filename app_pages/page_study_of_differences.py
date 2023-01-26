@@ -3,9 +3,12 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
+import matplotlib.image as img
 import math
 import seaborn as sns
 sns.set_style("whitegrid")
+from IPython.display import Image
+from IPython import display
 
 def page_study_of_differences_body():
 
@@ -35,31 +38,9 @@ def page_study_of_differences_body():
         f"as well as the events taking place in the world."
     )
 
-# Code based on EDA on selected variables of "Study of differences" notebook
 
-    def df_eda():
-        df_eda = df.filter(vars_to_study)
-
-    if st.checkbox("Correlation between opening and closing price"):
-        
-        price_difference(df_eda)
-
-# Code copied from Study of differences Notebook
-def price_difference(df_eda):
-    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data_int.csv")
-    target_var = ['24h Open (USD)', 'Closing Price (USD)']
-    vars_to_study = ['24h Open (USD)', 'Closing Price (USD)']
-    for col in vars_to_study:
-    
-        plot_categorical(df_eda, col, target_var)
-        print()
-
-# Code copied from Study of differences Notebook
-def plot_categorical(df, col, target_var):
-    df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data_int.csv")
-    
-    plt.figure(figsize=(9, 5))
-   
-    sns.regplot(x=df["24h Open (USD)"], y=df["Closing Price (USD)"])
+    image = img.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.jpg')
+    plt.imshow(image)
     plt.show()
 
+    display.Image('/workspace/fifth-milestone-project-bitcoin/app_pages/study_of_diff.jpg')
