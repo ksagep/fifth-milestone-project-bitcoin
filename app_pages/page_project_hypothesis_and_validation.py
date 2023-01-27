@@ -15,7 +15,7 @@ def page_project_hypothesis_and_validation_body():
     # Conclusions taken from studies
     st.success(
         f"*Business requirements 1:*\n\n"
-        f"The correlations and plots interpretation converge.\n"
+        f"The correlations and plots interpretation converge. The correlation was very strongly positive (0.99) because variables moved in the same direction.\n"
         f"The opening prices were higher more times than closing prices, **1450 vs 1337**.\n"
         f"When the client would like to sell Bitcoin, it is necessary to monitor the development of the exchange rate continuously,\n"
         f"as well as the events taking place in the world.\n\n"
