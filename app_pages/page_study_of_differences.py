@@ -39,8 +39,7 @@ def page_study_of_differences_body():
     )
 
 
-    image = img.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.jpg')
-    plt.imshow(image)
-    plt.show()
+    if st.checkbox("Correlation between opening and closing price"):
 
-    display.Image('/workspace/fifth-milestone-project-bitcoin/app_pages/study_of_diff.jpg')
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.png')
+        st.image(image)
