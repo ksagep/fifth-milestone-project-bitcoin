@@ -10,7 +10,7 @@ def page_project_hypothesis_and_validation_body():
 
         f"*Business requirements 2:*\n\n"
         f"The client would like to know that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.\n"
-        f"How will correlate the opening and closing price to each other? Which period of the day could be the best for trading?"
+        f"How will correlate the opening and closing price to each other? Which period of the day could be the best for trading, opening or closing?"
     )
     # Conclusions taken from studies
     st.success(

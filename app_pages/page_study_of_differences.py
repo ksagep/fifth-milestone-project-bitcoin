@@ -34,7 +34,8 @@ def page_study_of_differences_body():
     st.info(
         f"The correlations and plots interpretation converge. \n"
         f"The opening prices were higher more times than closing prices, **1450 vs 1337**. \n"
-        f"When the client would like to sell Bitcoin, it is necessary to monitor the development of the exchange rate continuously, \n"
+        f"In this case, it can be said that it is better to take into account the exchange rate at the opening of the market and sell the existing Bitcoin stock accordingly in order to achieve the greatest possible profit. \n"
+        f"When the client would like to sell or buy Bitcoin, it is necessary to monitor the development of the exchange rate continuously, \n"
         f"as well as the events taking place in the world."
     )
 
@@ -43,3 +44,16 @@ def page_study_of_differences_body():
 
         image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.png')
         st.image(image)
+
+        st.info(
+            f"The deviation of the values is small, they follow the line of the linear straight line. The correlation is very strongly positive between the two variables."
+        )
+
+    if st.checkbox("Distribution of opening and closing values"):
+
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff_duo.png')
+        st.image(image)
+
+        st.info(
+            f"The shape of the two diagrams is very similar, which supports the high correlation between the two variables."
+        )
