@@ -21,7 +21,7 @@ def page_study_of_differences_body():
     st.write("## Study of differences")
     st.info(
         f"The client interested to understand the patterns from **differences between opening and closing prices**\n"
-        f"so the client can realize or decide the most relevant variables which are correlated as best option to sell Bitcoins.")
+        f"so the client can realize or decide the most relevant variables which are correlated as best option to sell or buy Bitcoins on a given day.")
 
 # Correlation Study Summary
     st.write(

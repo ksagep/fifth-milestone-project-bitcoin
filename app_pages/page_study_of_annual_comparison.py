@@ -23,7 +23,8 @@ def page_study_of_annual_comparison_body():
     st.write("## Study of annual comparison")
     st.info(
         f"The client would like to know:\n"
-        f"As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.")
+        f"As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.\n\n"
+        f"How will correlate the opening and closing price to each other? Which period of the day could be the best for trading?")
 
     # Text based on Conclusions of the Study of annual comparison
     st.info(
@@ -33,7 +34,7 @@ def page_study_of_annual_comparison_body():
         f"**will not be smaller** than with a lower exchange rate.\n"
         f"The exchange rate was changing rapidly and the difference between the opening and closing prices were\n"
         f"**significantly bigger from january 2018** than in the previous 4 years.\n"
-        f"During the sale, more attention should be paid to the opening price than to the closing price.\n"
+        f"During the sale or buying, more attention should be paid to the opening price than to the closing price.\n"
         f"When buying, it may be more beneficial to observe the closing price."
     )
 
