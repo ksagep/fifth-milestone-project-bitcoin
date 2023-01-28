@@ -33,4 +33,4 @@ def page_summary_body():
         f"- The client interested to understand the patterns from **differences between opening and closing prices**\n"
         f"  so the client can realize or decide the most relevant variables which are correlated as best option to sell or buy Bitcoins on a given day.\n\n" 
         f"- The client would like to know that **as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.**\n"
-        f"  How will correlate the opening and closing price to each other? **Which period of the day could be the best for trading, opening or closing?**")
+        f"  How will correlate the opening and closing price to each other? **Which period of the year could be the best for trading, opening or closing?**")
