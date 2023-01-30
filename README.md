@@ -67,6 +67,11 @@ I did not use data augmentation and annotation during the development of project
 
 The assessment group drew my attention to the fact that the feature engineering notebook was not developed. I developed it and it contains now data exploration part, checking missing data with other method part, checking data duplication, checking outliers, variable transformation part, split the dataset.
 
+### Feature scaling and selection
+
+The aims of these parts are increase accuracy, reduce training time and take less overfitting.
+I used during the project the StandardScaler() and SelectFromModel() possibilities to build ML pipeline.
+
 ### Project Terms and Jargon
 
 -	*Exchange rate*: the value of rate between Bitcoin and USD on the given day
@@ -84,53 +89,24 @@ The assessment group drew my attention to the fact that the feature engineering 
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
 
+During the evaluation, it was determined by the assessment team that the pages did not appear on the dashboard due to an error. I correct it and I display these pages now. I developed the content of the business requirements also.
+
 ### Business Requirements 1 – Data visualisation and correlation study
+The client interested to understand the patterns from **differences between opening and closing prices** so the client can realize or decide the most relevant variables which are correlated as best option to sell or buy Bitcoins on a given day.
+
 -	I inspect the opening and closing value of exchange rate
 -	I create the difference between the two values for each day
 -	I conduct a correlation study to understand better the correlation to the expectation of client
 -	I plot the trends of differences in diagrams
 
 ### Business Requirements 2 - Data visualisation and correlation study
+As the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate. How will correlate the opening and closing price to each other? Which period of the year could be the best for trading?
+
 -   I inspect the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
 -   I make an annual comparison of these data with a correlation study
 -   I plot the annual values in a diagram
 
-## Dashboard design
-
-The structure of dashboard follow the list as you find below:
-
-   ### Page 1: Short project summary
-        - This page is showing the **dataset summary and the business requirements** as well as **the terms and jargons** for better understanding.
-
-        - Client's requirements:
-            - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
-            - To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
-
-        - Description of project dataset:
-            - The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
-            - The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about rate of exchange. The data set includes information about:
-                -	Open and closing prices which are show how the exchange rate developed during the given day;
-                -	The highest and lowest exchange rate value during the given day.
-
-        - Terms and jargons of the project:
-            -	Exchange rate: the value of rate between Bitcoin and USD on the given day
-            -	Open prices: the value of Bitcoin in USD at market open on given day
-            -   Closing prices: the value of Bitcoin in USD at market close on given day
-
-   ### Page 2: Differences between opening and closing value
-        It will answer business requirement 1
-        - Lists the findings related to the inspection of the opening and closing value of exchange rate
-        - Checkbox 1: Plot the trend of differences in a diagram
-
-   ### Page 3: Annual comparison
-        It will answer business requirement 2
-        - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
-        - Checkbox 1: Differences between annual comparison of the aformentioned data
-        
-   ### Page 4: Project hypothesis and validation
-        - Display every hypothesis and their validations
-
-   ## Features
+## Features
         
    ### Navigation 
         - The dashboard developed is a multipage streamlit application with sidebar navigation and checkbox links.
@@ -152,11 +128,49 @@ The structure of dashboard follow the list as you find below:
             This page shows the project hypothesis and how these were validated across the project.
 ![My Image](assets/images/project_hypothesis.jpg)
 
-## Unfixed bugs
-
-I could not solve the plotting issue on the dashboard. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I insert images about the results to the dashboard link to these with checkboxes.
+          - Page 5: Exchange rate predictor - Bitcoin
+            This page display the parts of ML pipeline with a short description.
 
 ## Deployment
+
+### Dashboard design
+
+The structure of dashboard follow the list as you find below:
+
+   #### Page 1: Short project summary
+        - This page is showing the **dataset summary and the business requirements** as well as **the terms and jargons** for better understanding.
+
+        - Client's requirements:
+            - Verify the client's assumption that the daily opening price is always lower than the closing price, so it is worth selling the cryptocurrency at the end of the day.
+            - To prove that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
+
+        - Description of project dataset:
+            - The dataset is sourced from Kaggle. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
+            - The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about rate of exchange. The data set includes information about:
+                -	Open and closing prices which are show how the exchange rate developed during the given day;
+                -	The highest and lowest exchange rate value during the given day.
+
+        - Terms and jargons of the project:
+            -	Exchange rate: the value of rate between Bitcoin and USD on the given day
+            -	Open prices: the value of Bitcoin in USD at market open on given day
+            -   Closing prices: the value of Bitcoin in USD at market close on given day
+
+   #### Page 2: Differences between opening and closing value
+        It will answer business requirement 1
+        - Lists the findings related to the inspection of the opening and closing value of exchange rate
+        - Checkbox 1: Plot the trend of differences in a diagram
+
+   #### Page 3: Annual comparison
+        It will answer business requirement 2
+        - Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year
+        - Checkbox 1: Differences between annual comparison of the aformentioned data
+        
+   #### Page 4: Project hypothesis and validation
+        - Display every hypothesis and their validations
+
+   #### Page 5: Exchange rate predictor - Bitcoin
+        - Display the ML pipeline parts with images and short descriptions.
+
 
 ### Workspace Setup
 The repository for this project was created off the [template](https://github.com/Code-Institute-Solutions/milestone-project-bring-your-own-data) provided by Code Institute and GitPod workspace was used to develop this project.
@@ -215,6 +229,10 @@ The repository for this project was created off the [template](https://github.co
 ### Media:
     - Am I Responsive for a responsive image in README 
     - I took the placeholder pictures from my app for README
+
+## Unfixed bugs
+
+I could not solve the plotting issue on the dashboard. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I insert images about the results to the dashboard link to these with checkboxes.
     
 ## Acknowledgements
 
