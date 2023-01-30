@@ -39,21 +39,26 @@ def page_study_of_differences_body():
         f"as well as the events taking place in the world."
     )
 
-
+# Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
 
         image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.png')
         st.image(image)
 
+# Under the image there is a short result and justification
         st.info(
             f"The deviation of the values is small, they follow the line of the linear straight line. The correlation is very strongly positive between the two variables."
+            f"I chose the Closing Price and the 24h Open columns and display their values in a plot to show how they are locating to each other."
+            f""
         )
 
+# Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
         image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff_duo.png')
         st.image(image)
 
+# Under the image there is a short result and justification
         st.info(
             f"The shape of the two diagrams is very similar, which supports the high correlation between the two variables."
         )
