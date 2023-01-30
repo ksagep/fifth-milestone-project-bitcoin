@@ -11,7 +11,9 @@ The purpose of the project is to help a friend of mine find answers who wants to
 
 For link to this website click [Here](https://fifth-milestoneproject-bitcoin.herokuapp.com/).
 
-# Planning Phase
+# **MACHINE LEARNING PIPELINE**
+
+# Planning Phase - project and dataset understanding
 
 ## Business requirements
 
@@ -22,12 +24,21 @@ A friend of mine has a successful business and has been making a lot of money re
 
 - The client would like to know that as the exchange rate rises, the difference between the opening and closing value will be smaller than with a lower exchange rate.
 
-## Dataset Content
+## Data collection
 
-The dataset is sourced from *Kaggle*. I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
-The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange. The data set includes information about:
--	Open and closing prices which are show how the exchange rate developed during the given day;
--	The highest and lowest exchange rate value during the given day.
+### Dataset Content
+
+The dataset is sourced from *Kaggle*. Kaggle is an online platform preferable for data scientist community and machine learning fans.
+I created a fictitious user story where predictive analytics can be applied in a real project in the future workplace.
+The fileformat of dataset is csv. The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014 – 29/Oct/2021. Each row represents a date between 14/Mar/2014 – 29/Oct/2021, each column contains different information about exchange rate. You can find in the dataset 7 **columns** which are as follows: Serial number, Currency, Date, Closing price, Opening price, 24h High and 24h Low. The last four columns contain different information about exchange rate.
+
+![My Image](assets/images/columns.jpg)
+
+The data set includes information about:
+-   Currency which is Bitcoin for every row
+-   Date of a given day 
+-	Open and closing prices in USD which are show how the exchange rate developed during the given day;
+-	The highest and lowest exchange rate in USD value during the given day.
 
 |      Variable        	|                      Meaning           	         |       Units 	     |   Range	|
 |:---------------------:|:--------------------------------------------------:|:----------:|:--------------:
@@ -37,15 +48,32 @@ The dataset has 2786 rows and represents bitcoin market data between 14/Mar/2014
 | 24h High (USD) 	    | the highest value of exchange rate on the given day| USD |119,67 - 64802,79|
 | 24h Low (USD)     	| the lowest value of exchange rate on the given day |  USD |84,33 - 62095,63|
 
-The types of data are as follows: **currency and date** are *object*, the **different prices** are *float64*. I transformed the type of date in the *Data collection phase* from object to float64 (numeric) because easier to manage this type of data during the studies. 
+The types of data are as follows: **currency and date** are *object*, the **different prices** are *float64*. I transformed the type of date in the *Data collection phase* from object to float64 (numeric) because easier to manage this type of data during the studies.
+In the assessment I got some instructions that should develop the description of dataset. I provided more information about dataset, data type and content of rows and columns.
 
-## Project Terms and Jargon
+### Data cleaning
+
+The dataset is well structured and there are no missing, duplicated or infinite data.
+
+![My Image](assets/images/pandas_overview.jpg)
+
+![My Image](assets/images/variables_overview.jpg)
+
+### Data augmentation and annotation
+
+I did not use data augmentation and annotation during the development of project.
+
+### Feature engineering
+
+The assessment group drew my attention to the fact that the feature engineering notebook was not developed. I developed it and it contains now data exploration part, checking missing data with other method part, checking data duplication, checking outliers, variable transformation part, split the dataset.
+
+### Project Terms and Jargon
 
 -	*Exchange rate*: the value of rate between Bitcoin and USD on the given day
 -	*Open prices*: the value of Bitcoin in USD at market open on given day
 -   *Closing prices*: the value of Bitcoin in USD at market close on given day
 
-## Hypothesis and how to validate?
+### Hypothesis and how to validate?
 
 1.	The opening price is lower than the closing price.
 	Validation: This will be validated with a correlation study and use diagrams for visualisation. Use mathematical calculation solution for better understanding of dataset. 
@@ -126,9 +154,7 @@ The structure of dashboard follow the list as you find below:
 
 ## Unfixed bugs
 
-In the studies, I used mathematical calculation solutions for better understanding of dataset. These brought interesting outcomes but I could not solve the plotting issue. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I used the math results and supported values for my studies.
-
-After the deployment in Heroku, the plots of studies did not work properly and did not appear on the screen. In the page Study of annual comparison, I could not solve the transformation of date to integer. In the page Study of differences, I did not find a solution for match between parameter x and relevant database columns ('24h Open (USD)', 'Closing Price (USD)'). 
+I could not solve the plotting issue on the dashboard. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I insert images about the results to the dashboard link to these with checkboxes.
 
 ## Deployment
 
