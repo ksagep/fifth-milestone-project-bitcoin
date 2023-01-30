@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
-def page_study_of_annual_comparison_body():
+def page_ml_predict_exchange_rate_body():
 
     st.write("## ML pipeline: Predict the exchange rate of Closing price")
     st.info(
@@ -19,8 +19,5 @@ def page_study_of_annual_comparison_body():
     st.info(
         f"\n"
         )
-
-image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/')
-st.image(image)
 
         

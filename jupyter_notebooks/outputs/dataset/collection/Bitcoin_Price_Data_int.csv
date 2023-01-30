@@ -1,4 +1,4 @@
-Unnamed: 0,Closing Price (USD),24h Open (USD),24h High (USD),24h Low (USD)
+Unnamed,ClosingPrice,24hOpen,24hHigh,24hLow
 0,124,125,125,123
 1,126,124,126,124
 2,109,126,126,84
