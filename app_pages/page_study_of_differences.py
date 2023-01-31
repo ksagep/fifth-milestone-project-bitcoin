@@ -51,7 +51,7 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.png')
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff.jpg')
         st.image(image)
 
 # Under the image there is a short result and justification
@@ -64,7 +64,7 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff_duo.png')
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/study_of_diff_duo.jpg')
         st.image(image)
 
 # Under the image there is a short result and justification
