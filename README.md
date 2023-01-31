@@ -13,6 +13,12 @@ For link to this website click [Here](https://fifth-milestoneproject-bitcoin.her
 
 # **MACHINE LEARNING PIPELINE**
 
+During the project development I followed the CRISP-DM (**CR**oss **I**ndustry **S**tandard **P**rocess for **D**ata **M**ining) method. This method contains six steps which are as follows: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation, Deployment. It is an industry-proven way to guide your data mining efforts. As a methodology, it includes descriptions of the typical phases of a project, the tasks involved with each phase, and an explanation of the relationships between these tasks.
+
+![My Image](assets/images/crisp_dm_steps.png)
+
+This picture helped me lot in the work. During the development I followed step by step this method and I worked out the details of each area. When I worked out a part of this method I start the next because the individual parts build on each other.
+
 # Planning Phase - project and dataset understanding
 
 ## Business requirements
@@ -114,22 +120,23 @@ As the exchange rate rises, the difference between the opening and closing value
 
           - Page 1: Short project summary
             This page contain briefs about Client's requirements, description of project dataset and terms and jargons.
-![My Image](assets/images/short_project_summary.jpg)
+![My Image](assets/images/short_project_sum.jpg)
 
           - Page 2: Differences between opening and closing value
             It shows answer business requirement 1. Lists the findings related to the inspection of the opening and closing value of exchange rate.
-![My Image](assets/images/study_of_diff_basic.jpg)
+![My Image](assets/images/study_of_diff_page.jpg)
 
           - Page 3: Annual comparison
             It will answer business requirement 2. Lists the findings related to the inspection of the difference between the opening and closing value on 1st January, 30th June and 31th December in every year.
-![My Image](assets/images/study_of_annual_basic.jpg)
+![My Image](assets/images/study_of_annual_comparison_page.jpg)
 
           - Page 4: Project hypothesis and validation
             This page shows the project hypothesis and how these were validated across the project.
-![My Image](assets/images/project_hypothesis.jpg)
+![My Image](assets/images/hypothesis_and_valid.jpg)
 
           - Page 5: Exchange rate predictor - Bitcoin
             This page display the parts of ML pipeline with a short description.
+![My Image](assets/images/rate_predictor.jpg)
 
 ## Deployment
 
@@ -225,6 +232,7 @@ The repository for this project was created off the [template](https://github.co
     - Net-information.com for ideas
     - Bobbyhadz.com for thoughts
     - Linuxhint.com for ideas
+    - Datascience-pm.com for better understanding of CRISP-DM approach
 
 ### Media:
     - Am I Responsive for a responsive image in README 
@@ -236,5 +244,5 @@ I could not solve the plotting issue on the dashboard. For plots had to provide 
     
 ## Acknowledgements
 
-    I would like to thank my family and especially for my wife who support me and sometimes pressured me to learn.
+    I would like to thank my family and especially for my wife who support me during the learning time.
     I would like to thank also my mentor, Marcel Mulders for his support, guidance and feedbacks throughout the course of the project.
