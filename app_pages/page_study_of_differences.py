@@ -39,7 +39,7 @@ def page_study_of_differences_body():
         f"as well as the events taking place in the world."
     )
 
-    image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/count_open_and_close.png')
+    image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/count_open_and_close.jpg')
     st.image(image)
 
     st.info(
