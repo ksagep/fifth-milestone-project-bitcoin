@@ -39,7 +39,7 @@ def page_study_of_differences_body():
         f"as well as the events taking place in the world."
     )
 
-    image = plt.imread('count_open_and_close.jpg')
+    image = plt.imread(count_open_and_close.jpg)
     st.image(image)
 
     st.info(
@@ -51,7 +51,7 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
 
-        image = plt.imread('study_of_diff.jpg')
+        image = plt.imread(study_of_diff.jpg)
         st.image(image)
 
 # Under the image there is a short result and justification
@@ -64,7 +64,7 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
-        image = plt.imread('study_of_diff_duo.jpg')
+        image = plt.imread(study_of_diff_duo.jpg)
         st.image(image)
 
 # Under the image there is a short result and justification
