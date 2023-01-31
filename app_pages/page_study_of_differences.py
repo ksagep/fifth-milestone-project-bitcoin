@@ -32,12 +32,21 @@ def page_study_of_differences_body():
 
 # Text based on Coclusions of "Study of differences" notebook
     st.info(
-        f"The correlations and plots interpretation converge. \n"
+        f"The correlation methodss and plots interpretation converge. \n"
         f"The opening prices were higher more times than closing prices, **1450 vs 1337**. \n"
         f"In this case, it can be said that it is better to take into account the exchange rate at the opening of the market and sell the existing Bitcoin stock accordingly in order to achieve the greatest possible profit. \n"
         f"When the client would like to sell or buy Bitcoin, it is necessary to monitor the development of the exchange rate continuously, \n"
         f"as well as the events taking place in the world."
     )
+
+    image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/count_open_and_close.png')
+    st.image(image)
+
+    st.info(
+            f"The values show that I subtracted the closing prices from the opening price.\n"
+            f"A negative value means that the closing price was higher than the opening price.\n"
+            f"In the case of a positive value, the opening price was higher. \n"
+            )
 
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
@@ -47,9 +56,9 @@ def page_study_of_differences_body():
 
 # Under the image there is a short result and justification
         st.info(
-            f"The deviation of the values is small, they follow the line of the linear straight line. The correlation is very strongly positive between the two variables."
-            f"I chose the Closing Price and the 24h Open columns and display their values in a plot to show how they are locating to each other."
-            f""
+            f"I chose the Closing Price and the 24h Open columns and display their values in a plot to show how they are locating to each other.\n"
+            f"The deviation of the values is small, they follow the line of the linear straight line.\n"
+            f"The correlation is very strongly positive between the two variables which is support by the spearman (value = 0,99) and pearson (value = 0,99) correlation methods."
         )
 
 # Checkbox provide possibility to display more information for client on the screen
@@ -60,5 +69,7 @@ def page_study_of_differences_body():
 
 # Under the image there is a short result and justification
         st.info(
-            f"The shape of the two diagrams is very similar, which supports the high correlation between the two variables."
+            f"The picture shows the distribution of the values of the opening and closing prices, which I chose to support the correlation between the two values.\n"
+            f"The shape of the two diagrams is very similar, which supports the high correlation between the two variables.\n"
+            f"There are no significant differences between the individual value groups."
         )

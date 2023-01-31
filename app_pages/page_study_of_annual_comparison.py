@@ -42,7 +42,11 @@ def page_study_of_annual_comparison_body():
         st.image(image)
 
         st.info(
-            f"There were no outliers at the examined times that would justify that more attention should be paid to the given period (start of a year, middle of a year or end of a year). The values rise relatively evenly along a straight line. The standard deviation of the values is low."
+            f"In order to support the business requirement, I performed a filter in the database for the beginning, middle and end of the given year.\n"
+            f"There were no outliers at the examined times that would justify that more attention should be paid to the given period (start of a year, middle of a year or end of a year).\n"
+            f"The values rise relatively evenly along a straight line.\n"
+            f"The standard deviation of the values is low."
+            f"It is not possible to identify a period in relation to the examined dates that would predict an exceptionally high profit."
         )
 
     if st.checkbox("Difference between opening and closing price"):
@@ -51,5 +55,8 @@ def page_study_of_annual_comparison_body():
         st.image(image)
 
         st.info(
-            f"The two diagrams show that there is an excess in the distribution of opening prices at two values: above 10,000 and above 40,000. On an annual basis, this supports the fact that more attention should be paid to the exchange rate at the opening when trading and also when selling."
+            f"I chose the counting open and close prices and their distribution and show the results on this picture.\n"
+            f"The two pictures are simimlar but not same.\n"
+            f"The two diagrams show that there is an excess in the distribution of opening prices at two values: above 10,000 and above 40,000.\n"
+            f"On an annual basis, this supports the fact that more attention should be paid to the exchange rate at the opening when trading."
         )
