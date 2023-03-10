@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
-import matplotlib.image as img
+import matplotlib.image as mpimg
 import math
 import seaborn as sns
 sns.set_style("whitegrid")
@@ -39,8 +39,12 @@ def page_study_of_differences_body():
         f"as well as the events taking place in the world."
     )
 
-    image = plt.imread('workspace/fifth-milestone-project-bitcoin/assets/images/count_open_and_close.png')
-    st.image(image)
+    plt.title("The differences between open and close price")
+    plt.xlabel("X pixel scaling")
+    plt.ylabel("Y pixels scaling")
+    image = mpimg.imread('workspace/fifth-milestone-project-bitcoin/assets/images/count_open_and_close.png')
+    plt.imshow(image)
+    plt.show()
 
     st.info(
             f"The values show that I subtracted the closing prices from the opening price.\n"
