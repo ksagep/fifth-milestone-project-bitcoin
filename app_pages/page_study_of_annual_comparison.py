@@ -38,7 +38,7 @@ def page_study_of_annual_comparison_body():
 
     if st.checkbox("Correlation between opening and closing price"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/annual.png')
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/annual.png')
         st.image(image)
 
         st.info(
@@ -51,7 +51,7 @@ def page_study_of_annual_comparison_body():
 
     if st.checkbox("Difference between opening and closing price"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/images/annual_duo.png')
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/annual_duo.png')
         st.image(image)
 
         st.info(
