@@ -9,6 +9,7 @@ import seaborn as sns
 sns.set_style("whitegrid")
 from IPython.display import Image
 from IPython import display
+from skimage import io
 
 def page_study_of_differences_body():
 
@@ -42,8 +43,16 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/count.png')
-        st.image(image)
+        plt.rcParams["figure.figsize"] = [3.50, 3.50]
+        plt.rcParams["figure.autolayout"] = True
+
+        f = "https://github.com/ksagep/fifth-milestone-project-bitcoin/blob/main/assets/count.png"
+        a = io.imread(f)
+
+        plt.imshow(a)
+        plt.axis('off')
+
+        plt.show()
 
     st.info(
             f"The values show that I subtracted the closing prices from the opening price.\n"
@@ -54,8 +63,16 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/diff.png')
-        st.image(image)
+        plt.rcParams["figure.figsize"] = [3.50, 3.50]
+        plt.rcParams["figure.autolayout"] = True
+
+        f = "https://github.com/ksagep/fifth-milestone-project-bitcoin/blob/main/assets/diff.png"
+        a = io.imread(f)
+
+        plt.imshow(a)
+        plt.axis('off')
+
+        plt.show()
 
 # Under the image there is a short result and justification
         st.info(
@@ -67,8 +84,16 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
-        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/diff_duo.png')
-        st.image(image)
+        plt.rcParams["figure.figsize"] = [3.50, 3.50]
+        plt.rcParams["figure.autolayout"] = True
+
+        f = "https://github.com/ksagep/fifth-milestone-project-bitcoin/blob/main/assets/diff_duo.png"
+        a = io.imread(f)
+
+        plt.imshow(a)
+        plt.axis('off')
+
+        plt.show()
 
 # Under the image there is a short result and justification
         st.info(
