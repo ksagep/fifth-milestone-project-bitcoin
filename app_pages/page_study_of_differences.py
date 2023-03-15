@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import matplotlib.image as img
 import math
 import seaborn as sns
-import skimage
 sns.set_style("whitegrid")
 from IPython.display import Image
 from IPython import display
