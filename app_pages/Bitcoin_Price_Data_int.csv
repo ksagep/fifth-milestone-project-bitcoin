@@ -1,4 +1,4 @@
-Unnamed: 0,Date,Closing Price (USD),24h Open (USD),24h High (USD),24h Low (USD)
+Unnamed: 0,Date,ClosingPrice,24hOpen,24hHigh,24hLow
 0,2014-03-14,124,125,125,123
 1,2014-03-15,126,124,126,124
 2,2014-03-16,109,126,126,84
