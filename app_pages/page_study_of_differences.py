@@ -10,7 +10,6 @@ import urllib.request
 sns.set_style("whitegrid")
 from IPython.display import Image
 from IPython import display
-from skimage import io
 from skimage.io import imread, imshow
 from urllib.request import urlopen
 
