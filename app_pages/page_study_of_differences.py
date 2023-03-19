@@ -18,7 +18,12 @@ def page_study_of_differences_body():
 
     # load the data
     df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data_int.csv")
-        
+
+    # load images
+    count = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/count.png")
+    diff = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/diff.png")
+    diff_duo = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/diff_duo.png")
+
     # Code copied from Study of differences Notebook
     vars_to_study = ['ClosingPrice', '24hOpen']
 
@@ -46,9 +51,9 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
         
-        count = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/count.png")
-        st.image(count)
         st.write("---")
+        st.image(count)
+        
 
     st.info(
             f"The values show that I subtracted the closing prices from the opening price.\n"
@@ -58,10 +63,10 @@ def page_study_of_differences_body():
 
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
-
-        diff = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/diff.png")
-        st.image(diff)
+        
         st.write("---")
+        st.image(diff)
+        
 
 # Under the image there is a short result and justification
         st.info(
@@ -73,10 +78,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
-        f = urlopen("https://github.com/ksagep/fifth-milestone-project-bitcoin/blob/main/assets/diff_duo.png")
-        a = plt.imread(f)
-        plt.imshow(a)
-        plt.show()
+        st.write("---")
+        st.image(diff_duo)
 
 # Under the image there is a short result and justification
         st.info(
