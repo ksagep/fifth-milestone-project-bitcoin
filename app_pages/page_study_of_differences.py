@@ -16,12 +16,7 @@ def page_study_of_differences_body():
 
     # load the data
     df = ("/workspace/fifth-milestone-project-bitcoin/app_pages/Bitcoin_Price_Data_int.csv")
-
-    # load images
-    count = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/count.png")
-    diff = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/diff.png")
-    diff_duo = plt.imread("workspace/fifth-milestone-project-bitcoin/assets/diff_duo.png")
-
+    
     # Code copied from Study of differences Notebook
     vars_to_study = ['ClosingPrice', '24hOpen']
 
@@ -49,8 +44,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
         
-        st.write("---")
-        st.image(count)
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/count.png')
+        st.image(image)
         
 
     st.info(
@@ -62,8 +57,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Correlation between opening and closing price"):
         
-        st.write("---")
-        st.image(diff)
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/diff.png')
+        st.image(image)
         
 
 # Under the image there is a short result and justification
@@ -76,8 +71,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Distribution of opening and closing values"):
 
-        st.write("---")
-        st.image(diff_duo)
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/diff_duo.png')
+        st.image(image)
 
 # Under the image there is a short result and justification
         st.info(
