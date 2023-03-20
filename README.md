@@ -240,7 +240,7 @@ The repository for this project was created off the [template](https://github.co
 
 ## Unfixed bugs
 
-I could not solve the plotting issue on the dashboard. For plots had to provide integers in the code however I had float64. I did not find the proper solution for transformation so I insert images about the results to the dashboard link to these with checkboxes.
+Plot the images on the dashboard. I tried to use short or full path of images; use urls of images and other methods. When I start the project from terminal, the code, what you can find in my project now, works properly. But when I deploy it on Heroku it did not worked properly and sent an error message (the given image does not exists) even though the project deploy was successful.
     
 ## Acknowledgements
 
