@@ -44,7 +44,7 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
         
-        image = plt.imread('count.png')
+        image = plt.imread(count.png)
         st.image(image)
         
 
