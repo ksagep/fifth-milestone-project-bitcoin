@@ -43,8 +43,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
         
-        im = Image.open(r"/workspace/fifth-milestone-project-bitcoin/assets/count.png")
-        im.show()
+        image = plt.imread('/workspace/fifth-milestone-project-bitcoin/assets/count.png')
+        st.image(image)
         
 
     st.info(
