@@ -8,9 +8,8 @@ import math
 import seaborn as sns
 import urllib.request
 sns.set_style("whitegrid")
-from IPython.display import Image
-from IPython import display
-from urllib.request import urlopen
+from PIL import Image
+
 
 def page_study_of_differences_body():
 
@@ -44,8 +43,8 @@ def page_study_of_differences_body():
 # Checkbox provide possibility to display more information for client on the screen
     if st.checkbox("Difference between opening and closing prices"):
         
-        image = plt.imread('fifth-milestone-project-bitcoin/assets/count.png')
-        st.image(image)
+        im = Image.open(r"/workspace/fifth-milestone-project-bitcoin/assets/count.png")
+        im.show()
         
 
     st.info(
